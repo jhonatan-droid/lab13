@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arrays
+        const numeros=[10,30,40,50]
+        //tamaño:4:n ... 0,1,2,3
+        console.log('numeros:',numeros);
+        //acceder a un elemento del array
+        console.log(numeros[0]);
+        console.log(numeros[1]);
+        console.log(numeros[2]);
+        console.log(numeros[3]);
+        console.log('recorrer con bucle for');
+        //tamaño
+        console.log('tamaño de numeros es:',numeros.length)
+        let suma=0
+        //recorrer array con un bucle
+        for (let i = 0; i < numeros.length; i++) {
+            suma=suma+numeros[i]
+           
+        }
+        console.log('Sumatoria: ',suma);
+        let promedio=suma/numeros.length
+        console.log('Promedio: ',promedio);
+        //funciones
+        //funciones declarativas
+        function sumar(){
+            console.log(8+4);
+        }
+        //llamara/invocar a la función
+        sumar()
+        //funcion con parametros
+        function producto(num1,num2){
+            let resultado=num1*num2
+            console.log('producto:',resultado);
+        }
+       
+        producto(4,10)
+        producto(2,3)
+        producto(4,7)
+        function area(base,altura){
+            return (base*altura)/2
+        }
+        let b=2//parseFloat(prompt('Ingrese la base del triangulo: '))
+        let a=4//parseFloat(prompt('Ingrese la altura del triangulo: '))
+        let areatri=area(b,a)
+        document.write('El area es:', areatri);
+        //closure
+        function externa(varext){
+            return function interna(varint){
+                console.log('variable externa:',varext);
+                console.log('variable interna:',varint);
+            }
+        }
+        const interna=externa('hola')
+        interna('mundo')
+        //funcion anonima
+        var resta=function(a,b){return a-b}
+        console.log(resta(10,5));
+        //funcion flecha
+        const doble=n=>{return n*2}
+        console.log(doble(7))
+        const potencia=(base,exponente)=> base**exponente  
+        console.log(potencia(3,3));
+        //map ...callback
+        function funcionTriple(n){return n*3}
+        let triple=numeros.map(elemento=>('valor:'+elemento))
+        console.log('numeros:',numeros);
+        console.log('triple:',triple);
+        //objeto
+        let persona={
+            nombre:'juan',
+            edad:'26',
+            id:123
+        }
+        console.log(persona.nombre,' tiene ',persona.edad,' años');
+        //funcion recursiva:factorial
+        function factorial(numero){
+            if (numero===0 || numero===1) {
+                return 1
+            } else {
+                return numero*factorial(numero-1)
+            }
+        }
+        console.log(factorial(5));
+        console.log(Math.pow(2,3))
+        const areaCirculo=(radio)=>(Math.PI *(radio**2))
+        console.log('area del circulo:',areaCirculo(2.5));
+        const farenheit=(celsius)=>((celsius*9/5)+32)
+        console.log('Farenheit:',farenheit(37));
+        const parImpar=(num1)=>{
+           
+            if (num1%2===0) {
+                console.log(`El número ${num1} es par.`);
+            } else {
+                console.log(`El número ${num1} es Impar.`);
+            }
+        }
+        parImpar(7)
+    </script>
+</body>
+</html>
