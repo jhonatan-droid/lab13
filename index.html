@@ -7,34 +7,25 @@
 </head>
 <body>
     <script>
-        //arrays
-        const numeros=[10,30,40,50]
-        //tamaño:4:n ... 0,1,2,3
-        console.log('numeros:',numeros);
-        //acceder a un elemento del array
-        console.log(numeros[0]);
-        console.log(numeros[1]);
-        console.log(numeros[2]);
-        console.log(numeros[3]);
-        console.log('recorrer con bucle for');
-        //tamaño
-        console.log('tamaño de numeros es:',numeros.length)
-        let suma=0
-        //recorrer array con un bucle
-        for (let i = 0; i < numeros.length; i++) {
-            suma=suma+numeros[i]
-           
+        //Parte 1
+        console.log('Los numero para las operaciones matematicas son num1: 8 y num2: 4');
+        
+        function suma(){
+            console.log('La suma es: ',8+4);
         }
-        console.log('Sumatoria: ',suma);
-        let promedio=suma/numeros.length
-        console.log('Promedio: ',promedio);
-        //funciones
-        //funciones declarativas
-        function sumar(){
-            console.log(8+4);
+        suma()
+        function resta(){
+            console.log('La resta es: ',8-4);
         }
-        //llamara/invocar a la función
-        sumar()
+        resta()
+        function mult(){
+            console.log('La multiplicación es: ',8*4);
+        }
+        mult()
+        function div(){
+            console.log('La división es: ',8/4);
+        }
+        div()
         //funcion con parametros
         function producto(num1,num2){
             let resultado=num1*num2
