@@ -26,7 +26,30 @@
             console.log('La división es: ',8/4);
         }
         div()
-        //funcion con parametros
+        //PARTE 2
+        let num1=2//parseFloat(prompt('Ingrese la base del triangulo: '))
+        let num2=4//parseFloat(prompt('Ingrese la altura del triangulo: '))
+        let operacion=suma //parseFloat(prompt('Ingrese la altura del triangulo: '))
+        function calculadora(num1,num2,operacion) {
+            switch (operacion) {
+                case suma:
+                    console.log('La suma es: ',num1+num2)
+                    break;
+                //case resta:
+                    
+                    //break;
+                //case mult:
+                    
+                    //break;
+                //case div:
+                    
+                    //break;        
+            
+                default:
+                    break;
+            }
+        }
+
         function producto(num1,num2){
             let resultado=num1*num2
             console.log('producto:',resultado);
@@ -42,58 +65,9 @@
         let a=4//parseFloat(prompt('Ingrese la altura del triangulo: '))
         let areatri=area(b,a)
         document.write('El area es:', areatri);
-        //closure
-        function externa(varext){
-            return function interna(varint){
-                console.log('variable externa:',varext);
-                console.log('variable interna:',varint);
-            }
-        }
-        const interna=externa('hola')
-        interna('mundo')
-        //funcion anonima
-        var resta=function(a,b){return a-b}
-        console.log(resta(10,5));
-        //funcion flecha
-        const doble=n=>{return n*2}
-        console.log(doble(7))
-        const potencia=(base,exponente)=> base**exponente  
-        console.log(potencia(3,3));
-        //map ...callback
-        function funcionTriple(n){return n*3}
-        let triple=numeros.map(elemento=>('valor:'+elemento))
-        console.log('numeros:',numeros);
-        console.log('triple:',triple);
-        //objeto
-        let persona={
-            nombre:'juan',
-            edad:'26',
-            id:123
-        }
-        console.log(persona.nombre,' tiene ',persona.edad,' años');
-        //funcion recursiva:factorial
-        function factorial(numero){
-            if (numero===0 || numero===1) {
-                return 1
-            } else {
-                return numero*factorial(numero-1)
-            }
-        }
-        console.log(factorial(5));
-        console.log(Math.pow(2,3))
-        const areaCirculo=(radio)=>(Math.PI *(radio**2))
-        console.log('area del circulo:',areaCirculo(2.5));
-        const farenheit=(celsius)=>((celsius*9/5)+32)
-        console.log('Farenheit:',farenheit(37));
-        const parImpar=(num1)=>{
-           
-            if (num1%2===0) {
-                console.log(`El número ${num1} es par.`);
-            } else {
-                console.log(`El número ${num1} es Impar.`);
-            }
-        }
-        parImpar(7)
+        
+        
+        
     </script>
 </body>
 </html>
